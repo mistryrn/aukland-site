@@ -6,6 +6,28 @@
  */
 
 /**
+ * Lets start off by cleaning up the output of wp_head()
+ */
+ // Remove the links to the extra feeds such as category feeds
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+// Remove the links to the general feeds: Post and Comment Feed
+remove_action( 'wp_head', 'feed_links', 2 );
+// Remove the link to the Really Simple Discovery service endpoint, EditURI link
+remove_action( 'wp_head', 'rsd_link' );
+// Remove the link to the Windows Live Writer manifest file.
+remove_action( 'wp_head', 'wlwmanifest_link' );
+// Remove index link
+remove_action( 'wp_head', 'index_rel_link' );
+// Remove prev link
+remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
+// Remove start link
+remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
+// Remove relational links for the posts adjacent to the current post.
+remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 );
+// Remove the XHTML generator that is generated on the wp_head hook, WP version
+remove_action( 'wp_head', 'wp_generator' );
+
+/**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
@@ -111,10 +133,14 @@ function aukland_scripts() {
 
 	/* Add Foundation JS */
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/foundation.min.js', array( 'jquery' ), '1', true );
+	// wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/foundation/foundation.topbar.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'foundation-modernizr-js', get_template_directory_uri() . '/foundation/js/vendor/modernizr.js', array( 'jquery' ), '1', true );
 
 	/* Foundation Init JS */
 	wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
+
+	/* Menu Toggle JS */
+	wp_enqueue_script( 'menu-toggle-js', get_template_directory_uri() . '/menuToggle.js', array( 'jquery' ), '1', true );
 
 	wp_enqueue_script( 'aukland-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

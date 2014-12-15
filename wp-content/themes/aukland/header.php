@@ -19,63 +19,22 @@
 
 <body <?php body_class(); ?>>
 
-<!-- Foundation .off-canvas-wrap start -->
-
-<div class="off-canvas-wrap" data-offcanvas>
-	<div class="inner-wrap">
-
-	<nav class="tab-bar hide-for-large-only">
-      <section class="left-small">
-        <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
-      </section>
-    </nav>
-
-	<!-- Off Canvas Menu -->
-	<aside class="left-off-canvas-menu">
-		<ul>
-			<?php wp_nav_menu( array( 
-				'theme_location' => 'primary', 
-				'container' => '', 
-				'menu_class' => '', 
-				'menu_id' => '', 
-				'items_wrap' => '%3$s',
-				'depth' => 1
-			) ); ?>
-		</ul>
-	</aside>
-
-<!-- Foundation .off-canvas-wrap end -->
-
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'aukland' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<div class="row"><!-- Foundation .row start -->
-				<div class="small-12 columns"><!-- Foundation .columns start -->
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				</div><!-- Foundation .columns end -->
-			</div><!-- Foundation .row end -->
-		</div>
-
-		<!-- Foundation top-bar navigation start -->
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<div class="row show-for-large-only">
-				<div class="small-12 columns">
-					<nav class="top-bar hide-for-small" data-topbar>
-						<section class="top-bar-section">
-						<?php wp_nav_menu( array( 
-							'theme_location' => 'primary', 
-							'menu_id' => 'top-nav',
-						) ); ?>
-						</section>
-					</nav><!-- #site-navigation -->
-				</div>
-			</div>
-		</nav><!-- .row -->
-		<!-- Foundation top-bar navigation end -->
-
+	<header id="masthead" class="site-header contain-to-grid fixed" role="banner">
+		<nav class="nav clearfix" role="navigation">
+			<h1 id="mobile-nav"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<a id="menu-toggle" class="anchor-link" href="#">Menu</a>
+			<ul class="simple-toggle" id="menu">
+			    <li><h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></li>
+				<li><a href="http://localhost/aukland-site/news/">News</a></li>
+				<li><a href="http://localhost/aukland-site/music/">Music</a></li>
+				<li><a href="http://localhost/aukland-site/tour/">Tour</a></li>
+				<li><a href="http://localhost/aukland-site/photos/">Photos</a></li>
+				<li><a href="http://localhost/aukland-site/contact/">Contact</a></li>
+			</ul>
+		</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
