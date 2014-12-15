@@ -7,26 +7,39 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="row" data-equalizer><!-- Foundation .row start -->
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<div class="large-9 medium-8 columns" data-equalizer-watch><!-- Foundation .columns start -->
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main" role="main">
 
-			<?php aukland_post_nav(); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+					<?php get_template_part( 'content', 'single' ); ?>
 
-		<?php endwhile; // end of the loop. ?>
+					<?php aukland_post_nav(); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+					<?php
+						// If comments are open or we have at least one comment, load up the comment template
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
+					?>
 
-<?php get_sidebar(); ?>
+				<?php endwhile; // end of the loop. ?>
+
+				</main><!-- #main -->
+			</div><!-- #primary -->
+
+			</div><!-- Foundation .columns end -->
+
+		<div class="large-3 medium-4 columns sidebar" data-equalizer-watch><!-- Foundation .columns start -->
+			
+			<?php get_sidebar(); ?>
+
+		</div><!-- Foundation .columns end -->
+
+	</div><!-- Foundation .row end -->
+	
 <?php get_footer(); ?>

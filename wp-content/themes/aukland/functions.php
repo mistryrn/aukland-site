@@ -102,6 +102,20 @@ add_action( 'widgets_init', 'aukland_widgets_init' );
 function aukland_scripts() {
 	wp_enqueue_style( 'aukland-style', get_stylesheet_uri() );
 
+	/* Add Foundation CSS */
+	wp_enqueue_style( 'foundation-normalize', get_stylesheet_directory_uri() . '/foundation/css/normalize.css' );
+	wp_enqueue_style( 'foundation', get_stylesheet_directory_uri() . '/foundation/css/foundation.css' );
+	
+	/* Add Custom CSS */
+	wp_enqueue_style( 'aukland-custom-style', get_stylesheet_directory_uri() . '/custom.css', array(), '1' );
+
+	/* Add Foundation JS */
+	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/foundation.min.js', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'foundation-modernizr-js', get_template_directory_uri() . '/foundation/js/vendor/modernizr.js', array( 'jquery' ), '1', true );
+
+	/* Foundation Init JS */
+	wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
+
 	wp_enqueue_script( 'aukland-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'aukland-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

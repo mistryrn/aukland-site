@@ -11,15 +11,23 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'aukland' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'aukland' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'aukland' ), 'Aukland', '<a href="http://rakeshmistry.ca/" rel="designer">Rakesh Mistry</a>' ); ?>
-		</div><!-- .site-info -->
+        <div class="row"><!-- Foundation .row start -->
+            <div class="small-12 columns"><!-- Foundation .columns start -->
+        		<div class="site-info">
+                    <p>&copy; <?php echo date("Y"); echo " "; bloginfo('name'); ?> - Designed by <a href="http://www.rakeshmistry.ca/">Rakesh Mistry</a></p>
+        		</div><!-- .site-info -->
+            </div><!-- Foundation .columns end -->
+        </div><!-- Foundation .row end -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
+    <!-- close the off-canvas menu -->
+    <a class="exit-off-canvas"></a>
+
+    </div><!-- .inner-wrap -->
+</div><!-- .off-canvas-wrap -->
 
 </body>
 </html>
