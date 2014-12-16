@@ -26,15 +26,25 @@
 }
 
 h1 { font-family: 'intro_regular'; }
+/*  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif; font-size: 18pt; font-weight: lighter; color: white; */
 
 /* Top Nav Menu Stlying */
 
 .contain-to-grid { background: none; }
 
-.nav { width:100%; /*background-color: rgba(219, 39, 55, 0.75);*/ /*border-bottom: 1px solid #ccc;*/ }
+.nav { 
+  min-height: 61px;
+  width:100%; 
+  /*border-bottom: 1px solid #ccc;*/
+  background-color: transparent;
+  transition: all 0.25s ease;
+}
+.nav.past-main {
+  background-color: rgba(219, 39, 55, 1.0);
+}
 ul.simple-toggle { list-style: none; padding: 0px; margin: 0px; text-align: center; }
 ul.simple-toggle li { display: inline-block; text-align: left; vertical-align: middle; }
-ul.simple-toggle li a { display: block; margin: 0 10px; text-decoration: none; color: #fff; border-bottom: 1px solid rgba(255, 255, 255, 0); transition: border-color .3s; }
+ul.simple-toggle li a { display: block; margin: 16px 10px; text-decoration: none; color: #fff; border-bottom: 1px solid rgba(255, 255, 255, 0); transition: border-color .3s; }
 ul.simple-toggle li h1 a, #mobile-nav a { display: block; margin: 0 10px; text-decoration: none; color: #fff; border: none; }
 ul.simple-toggle li a:hover { text-decoration: none; border-color: rgba(255, 255, 255, 1); transition: border-color .3s; }
 ul.simple-toggle li h1 a:hover, #mobile-nav a:hover { text-decoration: none; border: none; }
@@ -73,6 +83,9 @@ nav ul li a, .anchor-link { font-family: 'intro_condlight_free'; }
 nav ul li h1, #mobile-nav { margin: 0; }
 nav ul li h1 a { font-family: 'intro_regular'; }
 
+ul.simple-toggle li h1 a.menu-logo { transition: all 0.25s ease; }
+ul.simple-toggle li h1 a.menu-logo.invisible { display: none; }
+
 /* Main Page Hero */
 
 .main-hero {
@@ -80,15 +93,20 @@ nav ul li h1 a { font-family: 'intro_regular'; }
   background: url(images/bg2.jpg) no-repeat top #000;
   background-attachment: fixed;
   height: 85vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position: center 0px;
 }
 
 .main-hero h1 {
   color: #fff;
-  margin: 33vh auto;
+  margin: 30vh auto 0;
   line-height: 1.1;
   text-align: center;
+  font-size: 3em;
+  font-size: 11vw;
 }
 
 .overlay {
@@ -104,3 +122,8 @@ nav ul li h1 a { font-family: 'intro_regular'; }
   background: linear-gradient(to bottom,  rgba(219,39,55,0.65) 0%,rgba(216,123,131,0.65) 75%,rgba(255,255,255,0.9) 97%, rgba(255,255,255,1.0) 100%); /* W3C */
 
 }
+
+
+#otherdiv { height: 100vh; }
+
+

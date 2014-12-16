@@ -16,14 +16,14 @@ get_header(); ?>
 	<div class="main-hero">
 		<div class="overlay">
 			<div class="row">
-				<div class="large-12 columns">
-					<h1>Aukland</h1>
+				<div class="contain-to-grid">
+					<h1 id="main">Aukland</h1>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="row" data-equalizer><!-- Foundation .row start -->
+	<div id="otherdiv" class="row" data-equalizer><!-- Foundation .row start -->
 
 		<div class="large-9 medium-8 columns" data-equalizer-watch><!-- Foundation .columns start -->
 

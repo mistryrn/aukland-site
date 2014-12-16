@@ -17,3 +17,6 @@ wp-content/plugins/*
 # Ignore everything in the "themes" directory, except:
 wp-content/themes/*
 !wp-content/themes/aukland/
+
+# Ignore .DS_Store files
+*.DS_Store

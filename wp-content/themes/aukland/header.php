@@ -27,7 +27,7 @@
 			<h1 id="mobile-nav"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<a id="menu-toggle" class="anchor-link" href="#">Menu</a>
 			<ul class="simple-toggle" id="menu">
-			    <li><h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></li>
+			    <li><h1><a class="menu-logo invisible" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></li>
 				<li><a href="http://localhost/aukland-site/news/">News</a></li>
 				<li><a href="http://localhost/aukland-site/music/">Music</a></li>
 				<li><a href="http://localhost/aukland-site/tour/">Tour</a></li>

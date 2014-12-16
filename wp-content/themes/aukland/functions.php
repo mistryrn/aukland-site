@@ -142,6 +142,9 @@ function aukland_scripts() {
 	/* Menu Toggle JS */
 	wp_enqueue_script( 'menu-toggle-js', get_template_directory_uri() . '/menuToggle.js', array( 'jquery' ), '1', true );
 
+	/* Menu Scroll JS */
+	wp_enqueue_script( 'menu-scroll-js', get_template_directory_uri() . '/menuScroll.js', array( 'jquery' ), '1', true );
+
 	wp_enqueue_script( 'aukland-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'aukland-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
