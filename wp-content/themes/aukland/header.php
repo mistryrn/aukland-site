@@ -25,14 +25,14 @@
 	<header id="masthead" class="site-header contain-to-grid fixed" role="banner">
 		<nav class="nav clearfix" role="navigation">
 			<h1 id="mobile-nav"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<a id="menu-toggle" class="anchor-link" href="#">Menu</a>
+			<a id="menu-toggle" class="anchor-link" href="">MENU</a>
 			<ul class="simple-toggle" id="menu">
-			    <li><h1><a class="menu-logo invisible" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></li>
-				<li><a href="http://localhost/aukland-site/news/">News</a></li>
-				<li><a href="http://localhost/aukland-site/music/">Music</a></li>
-				<li><a href="http://localhost/aukland-site/tour/">Tour</a></li>
-				<li><a href="http://localhost/aukland-site/photos/">Photos</a></li>
-				<li><a href="http://localhost/aukland-site/contact/">Contact</a></li>
+			    <li><h1><a class="menu-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></li>
+				<li><a href="http://localhost/aukland-site/news/">NEWS</a></li>
+				<li><a href="http://localhost/aukland-site/music/">MUSIC</a></li>
+				<li><a href="http://localhost/aukland-site/tour/">TOUR</a></li>
+				<li><a href="http://localhost/aukland-site/photos/">PHOTOS</a></li>
+				<li><a href="http://localhost/aukland-site/contact/">CONTACT</a></li>
 			</ul>
 		</nav>
 	</header><!-- #masthead -->
