@@ -68,7 +68,7 @@ function aukland_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -112,8 +112,8 @@ function aukland_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'aukland_widgets_init' );
@@ -126,6 +126,7 @@ function aukland_scripts() {
 
 	/* Add Foundation CSS */
 	wp_enqueue_style( 'foundation-normalize', get_stylesheet_directory_uri() . '/foundation/css/normalize.css' );
+	wp_enqueue_style( 'foundation-icons', get_stylesheet_directory_uri() . '/foundation-icons.css' );
 	wp_enqueue_style( 'foundation', get_stylesheet_directory_uri() . '/foundation/css/foundation.css' );
 	
 	/* Add Custom CSS */
@@ -179,3 +180,25 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// Add SoundCloud oEmbed
+function add_oembed_soundcloud(){
+	wp_oembed_add_provider( 'http://soundcloud.com/*', 'http://soundcloud.com/oembed' );
+}
+add_action('init','add_oembed_soundcloud');
+
+
+// Content limit
+function content($limit) {
+  $content = apply_filters('the_content', get_the_content()); 
+  $content = str_replace(']]>', ']]&gt;', $content);
+  $content = explode(' ', $content, $limit);
+  if (count($content)>=$limit) {
+    array_pop($content);
+    $content = implode(" ",$content).'...';
+  } else {
+    $content = implode(" ",$content);
+  }	
+  $content = preg_replace('/\[.+\]/','', $content);
+  return $content;
+}

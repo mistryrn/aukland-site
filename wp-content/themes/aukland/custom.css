@@ -1,4 +1,6 @@
-/* Fonts */
+/*--------------------------------------------------------------
+FONTS
+--------------------------------------------------------------*/
 
 body {
   /* Webkit font fix, prevents fonts from displaying too thin */
@@ -31,9 +33,11 @@ body {
 }
 
 h1 { font-family: 'intro_regular'; }
-/*  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif; font-size: 18pt; font-weight: lighter; color: white; */
+h2, h3, h4, nav ul li a, .anchor-link { font-family: 'latolight'; }
 
-/* Top Nav Menu Stlying */
+/*--------------------------------------------------------------
+TOP NAV MENU STLYING
+--------------------------------------------------------------*/
 
 .contain-to-grid { background: none; }
 
@@ -50,7 +54,7 @@ h1 { font-family: 'intro_regular'; }
   transition: all 0.25s ease;
 }
 .nav.past-main {
-  background-color: rgba(219, 39, 55, 1.0);
+  background-color: rgba(219, 39, 55, 0.9);
 }
 ul.simple-toggle { list-style: none; padding: 0px; margin: 0px; text-align: center; }
 ul.simple-toggle li { display: inline-block; text-align: left; vertical-align: top; }
@@ -70,7 +74,7 @@ ul.simple-toggle li h1 a:hover, #mobile-nav a:hover { text-decoration: none; bor
   .anchor-link, .anchor-link:hover, .anchor-link:visited { color: #fff; text-decoration: none; }
 
   nav.open {
-    background-color: rgba(219, 39, 55, 1.0);
+    background-color: rgba(219, 39, 55, 0.9);
     -webkit-transition: all 0;
     -moz-transition: all 0;
     -ms-transition: all 0;
@@ -99,7 +103,6 @@ ul.simple-toggle li h1 a:hover, #mobile-nav a:hover { text-decoration: none; bor
   
 }
 
-nav ul li a, .anchor-link { font-family: 'latolight'; }
 nav ul li h1 { margin: 0; }
 nav ul li h1 a { font-family: 'intro_regular'; }
 
@@ -112,12 +115,10 @@ ul.simple-toggle li h1 a.menu-logo, #mobile-nav {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/*ul.simple-toggle li h1 a.menu-logo.bigger {
-  display: block;
-  height: 61px;
-}*/
 
-/* Main Page Hero */
+/*--------------------------------------------------------------
+MAIN PAGE HERO
+--------------------------------------------------------------*/
 
 .main-hero {
   /*rgba(219, 39, 55, 0.75)*/
@@ -155,6 +156,32 @@ ul.simple-toggle li h1 a.menu-logo, #mobile-nav {
 }
 
 
-#otherdiv { height: 100vh; }
+#main-content { min-height: 100vh; padding-top: 30px; }
 
+
+/*--------------------------------------------------------------
+MAIN PAGE CONTENT
+--------------------------------------------------------------*/
+
+#main ul { list-style: none; }
+article a, article a:visited { text-decoration: none; color: black; }
+figure { margin: 0; }
+
+/*--------------------------------------------------------------
+SIDEBAR
+--------------------------------------------------------------*/
+#secondary ul { margin: 0; list-style: none; }
+
+/*--------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------*/
+
+footer { text-align: center; }
+.bottom-fixed {
+  margin-bottom: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  /*display: none;*/
+}
 

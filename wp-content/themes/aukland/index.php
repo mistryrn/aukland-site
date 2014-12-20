@@ -23,35 +23,32 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div id="otherdiv" class="row" data-equalizer><!-- Foundation .row start -->
+	<div id="main-content" class="row" data-equalizer><!-- Foundation .row start -->
 
 		<div class="large-8 columns" data-equalizer-watch><!-- Foundation .columns start -->
 
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
-
 					<?php if ( have_posts() ) : ?>
 
-						<ul class="large-block-grid-2"><!-- Foundation block grid start -->
+						<h3>LATEST NEWS</h3>
 
 						<?php /* Start the Loop */ ?>
 						<?php while ( have_posts() ) : the_post(); ?>
 
-							<li><!-- Foundation block grid item start -->
-							<?php
-								/* Include the Post-Format-specific template for the content.
-								 * If you want to override this in a child theme, then include a file
-								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-								 */
-								get_template_part( 'content', get_post_format() );
-							?>
-							</li><!-- Foundation block grid item end -->
+								<div>
+									<?php
+										/* Include the Post-Format-specific template for the content.
+										 * If you want to override this in a child theme, then include a file
+										 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+										 */
+										get_template_part( 'content', get_post_format() );
+									?>
+								</div>
 
 						<?php endwhile; ?>
 
-						</ul><!-- Foundation block grid end -->
-
-						<?php aukland_paging_nav(); ?>
+						<a href="http://localhost/aukland-site/news/">All news &raquo;</a>
 
 					<?php else : ?>
 
