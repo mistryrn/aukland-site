@@ -7,9 +7,9 @@
 
 get_header(); ?>
 
-	<div class="row" data-equalizer><!-- Foundation .row start -->
+	<div class="row" id="main-content" data-equalizer><!-- Foundation .row start -->
 
-		<div class="large-9 medium-8 columns" data-equalizer-watch><!-- Foundation .columns start -->
+		<div class="small-12 medium-8 columns" data-equalizer-watch><!-- Foundation .columns start -->
 
 			<section id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
@@ -17,7 +17,7 @@ get_header(); ?>
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
-						<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'aukland' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+						<h3 class="page-title"><?php printf( __( 'Search Results for: %s', 'aukland' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
 					</header><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>
@@ -51,7 +51,7 @@ get_header(); ?>
 		
 		</div><!-- Foundation .columns end -->
 
-		<div class="large-3 medium-4 columns sidebar" data-equalizer-watch><!-- Foundation .columns start -->
+		<div class="small-12 medium-4 columns sidebar" data-equalizer-watch><!-- Foundation .columns start -->
 			
 			<?php get_sidebar(); ?>
 

@@ -47,7 +47,6 @@ get_header(); ?>
 								</div>
 
 						<?php endwhile; ?>
-						<?php aukland_paging_nav(); ?>
 					<?php else : ?>
 
 						<?php get_template_part( 'content', 'none' ); ?>

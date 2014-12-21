@@ -23,11 +23,11 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'aukland' ); ?></a>
 
 	<header id="masthead" class="site-header contain-to-grid fixed" role="banner">
-		<nav class="nav clearfix" role="navigation">
-			<h1 id="mobile-nav"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<nav class="nav clearfix<?php if (! is_front_page()) echo " regular" ?>" role="navigation">
+			<h1 id="mobile-nav"><a class="show-for-small" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<a id="menu-toggle" class="anchor-link" href="">MENU</a>
 			<ul class="simple-toggle" id="menu">
-			    <li><h1><a class="menu-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></li>
+			    <li><h1 class="show-for-medium-up"><a class="menu-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></li>
 				<li><a href="http://localhost/aukland-site/news/">NEWS</a></li>
 				<li><a href="http://localhost/aukland-site/tour/">TOUR</a></li>
 				<li><a href="http://localhost/aukland-site/music/">MUSIC</a></li>

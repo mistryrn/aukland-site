@@ -34,8 +34,17 @@ body {
 
 h1 { font-family: 'intro_regular'; }
 h2, h3, h4, nav ul li a, .anchor-link { font-family: 'latolight'; }
-@media only screen and (min-width: 40.063em) h4 { font-size: 1.3rem; }
+@media only screen and (min-width: 40.063em) {
+  h4 {
+   font-size: 1.3rem; 
+  }
+}
 p { font-size: 0.85rem; }
+@media only screen and (min-width: 40.063em) {
+  p {
+    font-size: 1rem;
+  }
+}
 a {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -74,9 +83,9 @@ ul.simple-toggle li h1 a:hover, #mobile-nav a:hover { text-decoration: none; bor
 
 .anchor-link { display: none; margin-right: 20px; text-align: left; color: #fff; text-decoration: none; float: right; }
 #mobile-nav { display:none; margin: 0; float: left; line-height: 61px;}
-#mobile-nav a { display: block; margin: 0 20px; text-decoration: none; color: #fff; border: none; }
+#mobile-nav a { display: none; margin: 0 20px; text-decoration: none; color: #fff; border: none; }
 
-@media (max-width:48.000em){
+@media (max-width:40.000em){
   
   ul.simple-toggle { display: none; }
   .anchor-link, #mobile-nav { display: block; }
@@ -125,11 +134,14 @@ ul.simple-toggle li h1 a.menu-logo, #mobile-nav, #sc {
   transition: all 0.25s ease;
 }
 
+#content { margin-top: 50px; }
+
 /*--------------------------------------------------------------
 MAIN PAGE HERO
 --------------------------------------------------------------*/
 
 .main-hero {
+  margin-top: -50px;
   background: url(images/bg2.jpg) no-repeat top #000;
   background-attachment: fixed;
   height: 100vmin;
@@ -163,7 +175,7 @@ MAIN PAGE HERO
 }
 
 
-#main-content { min-height: 100vh; padding-top: 30px; }
+#main-content { min-height: 90vh; padding-top: 30px; }
 
 
 /*--------------------------------------------------------------
@@ -174,7 +186,7 @@ MAIN PAGE CONTENT
 article a, article a:visited { text-decoration: none; color: black; }
 figure { margin: 0; }
 .entry-title { margin-bottom: 0; }
-.entry-title a:hover, .entry-content p a:hover { color: #7FC1CE; }
+.entry-title a:hover, .entry-content p a:hover { color: #008CBA; }
 .entry-content { margin-top: 0.25em; }
 .entry-content p { margin-bottom: 0; }
 .continue { font-family: 'latolight'; padding-top: 5px; }
@@ -194,35 +206,40 @@ TOUR DATES
   color: black;
   text-decoration: none;
 }
-.UpcomingShowsWidget a.btn {
-  padding: 2px;
+
+.UpcomingShowsWidget a.btn, #rsvp a, #tickets a {
+  padding: 5px;
   margin: 0;
-  color: #7FC1CE;
-  border: 1px #7FC1CE solid;
+  color: #000;
+  border: 1px #000 solid;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  font-size: 75%;
 }
-.UpcomingShowsWidget a.btn:hover {
-  padding: 2px;
+.UpcomingShowsWidget a.btn:hover, #rsvp a:hover, #tickets a:hover {
+  padding: 5px;
   margin: 0;
-  color: #000;
-  border: 1px #000 solid;
+  color: #fff;
+  background-color: #000;
 }
-.UpcomingShowsWidget a.btn.inactive {
-  padding: 2px;
+.UpcomingShowsWidget a.btn.inactive, .UpcomingShowsWidget a.btn.inactive:hover, 
+#rsvp a.inactive, #rsvp a.inactive:hover, #tickets a.inactive, #tickets a.inactive:hover {
+  padding: 5px;
   margin: 0;
   color: #ccc;
   border: 1px #ccc solid;
+  background-color: #fff;
 }
 .UpcomingShowsWidget p { font-size: 1rem; margin: 0; padding: 0; }
 .UpcomingShowsWidget h4 { margin: 0; padding: 0; }
 .tour-links { float: right; }
-
+#rsvp { padding-bottom: 4px; }
 .tour-date, .no-pad { padding: 0; }
 .tour-date, .UpcomingShowsWidget li { border-bottom: 1px #ccc solid; padding: 10px 0; }
+.tour-date li { vertical-align: middle; }
 .tour-date:first-of-type, .UpcomingShowsWidget li:first-of-type { padding-top: 0px; }
 .tour-date:last-of-type, .UpcomingShowsWidget li:last-of-type { border-bottom: none; padding-bottom: 0px; }
 /*#rsvp a, #tickets a { float: right; text-align: right; }*/
@@ -239,13 +256,16 @@ SOCIAL MEDIA WIDGET
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-.icon-btn:hover { color: #7FC1CE; }
+.icon-btn:hover { color: #008CBA; }
 
 /*--------------------------------------------------------------
 FOOTER
 --------------------------------------------------------------*/
 
-footer { text-align: center; font-family: 'latolight'; }
+footer {
+  text-align: center;
+  font-family: 'latolight';
+}
 footer a {
   -webkit-transition: all 0;
   -moz-transition: all 0;
@@ -276,6 +296,23 @@ MUSIC AND VIDEOS
 }
 
 #music-links h4 { float: right; }
+#music-links a, #music-links a:visited { color: black; }
+#music-links a:hover { color: #008cba; }
+
+/*--------------------------------------------------------------
+CONTACT
+--------------------------------------------------------------*/
+#contact-info h3, #contact-info h4 { margin: 0.5%; }
+#email { font-size: 75%; }
+#email, #email:visited { color: black; }
+#email:hover { color: #008cba; }
+#bio-pic { padding-bottom: 20px; }
+#socialsidebarwidget-3 { padding-top: 20px; }
+@media only screen and (min-width: 40.063em) {
+  #email {
+    font-size: 100%;
+  }
+}
 
 /*-----------------------------------------------
 INDEX PAGINATION

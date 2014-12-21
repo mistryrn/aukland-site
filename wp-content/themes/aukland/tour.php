@@ -16,7 +16,7 @@ get_header(); ?>
             <h3>TOUR</h3>
 
             <?php
-            $response = file_get_contents("http://api.bandsintown.com/artists/Aukland/events.json?api_version=2.0&app_id=AUKLANDSITE");
+            $response = file_get_contents("http://api.bandsintown.com/artists/Moneen/events.json?api_version=2.0&app_id=AUKLANDSITE");
             $response = json_decode($response);
             if ($response != null) {
                 $i = 0;
@@ -34,16 +34,16 @@ get_header(); ?>
                       $region = $event->venue->region;
                   }
                   // Date-Time Info
-                    echo "<div class='small-3 medium-2 large-1 columns no-pad'>";
+                    echo "<div class='small-3 medium-2 columns no-pad'>";
                       echo "<div class='small-12 columns no-pad' id='date'>";
-                        echo "<p>$showdate</p> "; // rsvp
+                        echo "<h4>$showdate</h4> "; // rsvp
                       echo "</div>";
-                      echo "<div class='small-12 columns no-pad' id='day'>";
-                        echo "<p>$showday</p> "; // rsvp
-                      echo "</div>";
+                      // echo "<div class='small-12 columns no-pad' id='day'>";
+                      //   echo "<p>$showday</p> "; // rsvp
+                      // echo "</div>";
                     echo "</div>";
                   // Location Info
-                    echo "<div class='small-7 medium-8 large-9 columns no-pad' id='location'>";
+                    echo "<div class='small-7 medium-8 large-8 columns no-pad' id='location'>";
                       echo "<div class='small-12 medium-7 large-8 columns no-pad'>";
                         echo "<h4>$venue</h4>";
                       echo "</div>";
@@ -71,7 +71,7 @@ get_header(); ?>
                 echo "<div class='tour-date small-12 columns'>";
                   echo "<h4>Sorry, there are no upcoming shows at this time. Please check back soon!</h4>";
                   echo "<p>Sign up below and get notified whenever Aukland comes to town:</p>";
-                  echo "<a href='http://www.bandsintown.com/Aukland/start_tracking?came_from=AUKLANDSITE' class='button'>Notify Me</a>";
+                  echo "<a href='http://www.bandsintown.com/Aukland/start_tracking?came_from=AUKLANDSITE' class='button small success'>Notify Me</a>";
                 echo "</div>";
             }
             ?>            
