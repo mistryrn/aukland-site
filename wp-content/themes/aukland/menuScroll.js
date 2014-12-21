@@ -9,6 +9,7 @@ jQuery(window).on('scroll', function() {
     if (stop > maintop) {
         jQuery('.nav').addClass('past-main');
         jQuery('.menu-logo').show();
+        jQuery('#sc').fadeIn(250);
         if (jQuery('ul.simple-toggle').css('display') == 'none' || jQuery('.nav').hasClass('open')) {
             jQuery('#mobile-nav').show();
         }

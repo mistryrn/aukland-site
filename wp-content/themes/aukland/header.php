@@ -29,9 +29,9 @@
 			<ul class="simple-toggle" id="menu">
 			    <li><h1><a class="menu-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></li>
 				<li><a href="http://localhost/aukland-site/news/">NEWS</a></li>
-				<li><a href="http://localhost/aukland-site/music/">MUSIC</a></li>
 				<li><a href="http://localhost/aukland-site/tour/">TOUR</a></li>
-				<li><a href="http://localhost/aukland-site/photos/">PHOTOS</a></li>
+				<li><a href="http://localhost/aukland-site/music/">MUSIC</a></li>
+				<li><a href="http://localhost/aukland-site/videos/">VIDEOS</a></li>
 				<li><a href="http://localhost/aukland-site/contact/">CONTACT</a></li>
 			</ul>
 		</nav>
