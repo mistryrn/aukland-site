@@ -147,6 +147,9 @@ function aukland_scripts() {
 
 	/* Foundation Init JS */
 	wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
+	
+	/* Background JS */
+	wp_enqueue_script( 'bg-js', get_template_directory_uri() . '/bg.js', array( 'jquery' ), '1', true );
 
 	/* Menu Toggle JS */
 	wp_enqueue_script( 'menu-toggle-js', get_template_directory_uri() . '/menuToggle.js', array( 'jquery' ), '1', true );
