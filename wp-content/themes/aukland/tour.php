@@ -16,7 +16,7 @@ get_header(); ?>
             <h3>TOUR</h3>
 
             <?php
-            $response = file_get_contents("http://api.bandsintown.com/artists/Moneen/events.json?api_version=2.0&app_id=AUKLANDSITE");
+            $response = file_get_contents("http://api.bandsintown.com/artists/Aukland/events.json?api_version=2.0&app_id=AUKLANDSITE");
             $response = json_decode($response);
             if ($response != null) {
                 $i = 0;
