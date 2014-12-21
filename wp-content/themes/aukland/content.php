@@ -6,7 +6,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+		<?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -30,7 +30,7 @@
 			// 	'before' => '<div class="page-links">' . __( 'Pages:', 'aukland' ),
 			// 	'after'  => '</div>',
 			// ) );
-			echo '<div><a href="'.get_the_permalink().'">Continue reading <span class="meta-nav">&rarr;</span></a></div>'
+			echo '<p class="continue"><a href="'.get_the_permalink().'">Continue reading <span class="meta-nav">&rarr;</span></a></p>'
 		?>
 	</div><!-- .entry-content -->
 

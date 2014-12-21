@@ -47,9 +47,7 @@ get_header(); ?>
 								</div>
 
 						<?php endwhile; ?>
-
-						<a href="http://localhost/aukland-site/news/">All news &raquo;</a>
-
+						<?php aukland_paging_nav(); ?>
 					<?php else : ?>
 
 						<?php get_template_part( 'content', 'none' ); ?>

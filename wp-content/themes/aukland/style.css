@@ -718,7 +718,7 @@ object {
 12.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: 1.5em;
+	margin-bottom: 0.25em;
 	max-width: 100%;
 }
 
@@ -726,15 +726,6 @@ object {
 	display: block;
 	margin: 0 auto;
 }
-
-.wp-caption-text {
-	text-align: center;
-}
-
-.wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
-}
-
 /*--------------------------------------------------------------
 12.2 Galleries
 --------------------------------------------------------------*/

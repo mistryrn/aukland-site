@@ -16,18 +16,22 @@ get_header(); ?>
             <h3>NEWS</h3>
 
             <?php
+            $num_posts = wp_count_posts('show')->publish;
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $type = 'post';
             $args=array(
               'post_type' => $type,
               'post_status' => 'publish',
               'posts_per_page' => 5,
+              'caller_get_posts'=> 1,
               'orderby'=>'date',
+              'paged' => $paged,
               'order'=>'DESC');
-
-            $my_query = null;
-            $my_query = new WP_Query($args);
-            if( $my_query->have_posts() ) {
-              while ($my_query->have_posts()) : $my_query->the_post(); ?>
+            $temp = $wp_query;
+            $wp_query = null;
+            $wp_query = new WP_Query($args);
+            if( $wp_query->have_posts() ) {
+              while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                 
                 <div>
                   <?php
@@ -39,12 +43,11 @@ get_header(); ?>
                   ?>
                 
                 </div>
-                <?php aukland_paging_nav(); ?>
               <?php endwhile;
+              aukland_paging_nav();
             }
             wp_reset_query();  // Restore global post data stomped by the_post().
-            ?>            
-            
+            ?>
 
         </main><!-- #main -->
       </div><!-- #primary -->
@@ -60,4 +63,3 @@ get_header(); ?>
   </div><!-- Foundation .row end -->
 
 <?php get_footer(); ?>
-

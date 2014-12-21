@@ -34,6 +34,15 @@ body {
 
 h1 { font-family: 'intro_regular'; }
 h2, h3, h4, nav ul li a, .anchor-link { font-family: 'latolight'; }
+@media only screen and (min-width: 40.063em) h4 { font-size: 1.3rem; }
+p { font-size: 0.85rem; }
+a {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
 
 /*--------------------------------------------------------------
 TOP NAV MENU STLYING
@@ -121,7 +130,6 @@ MAIN PAGE HERO
 --------------------------------------------------------------*/
 
 .main-hero {
-  /*rgba(219, 39, 55, 0.75)*/
   background: url(images/bg2.jpg) no-repeat top #000;
   background-attachment: fixed;
   height: 100vmin;
@@ -134,11 +142,10 @@ MAIN PAGE HERO
 
 .main-hero h1 {
   color: #fff;
-  margin: 30vh auto 0;
-  line-height: 1.1;
+  margin: 37vmin auto 0;
+  line-height: 1;
   text-align: center;
-  font-size: 3em;
-  font-size: 11vw;
+  font-size: 17vmin;
 }
 
 .overlay {
@@ -166,32 +173,92 @@ MAIN PAGE CONTENT
 #main ul { list-style: none; }
 article a, article a:visited { text-decoration: none; color: black; }
 figure { margin: 0; }
+.entry-title { margin-bottom: 0; }
+.entry-title a:hover, .entry-content p a:hover { color: #7FC1CE; }
+.entry-content { margin-top: 0.25em; }
+.entry-content p { margin-bottom: 0; }
+.continue { font-family: 'latolight'; padding-top: 5px; }
+.wp-caption-text { font-family: 'latolight'; margin: 0; padding: 0 5px; text-align: left; }
 
 /*--------------------------------------------------------------
 SIDEBAR
 --------------------------------------------------------------*/
-#secondary ul { margin: 0; list-style: none; }
+.UpcomingShowsWidget ul, .SocialSidebarWidget ul {
+  list-style: none; margin: 0;
+}
+/*--------------------------------------------------------------
+TOUR DATES
+--------------------------------------------------------------*/
+
+.UpcomingShowsWidget a, .UpcomingShowsWidget a:visited {
+  color: black;
+  text-decoration: none;
+}
+.UpcomingShowsWidget a.btn {
+  padding: 2px;
+  margin: 0;
+  color: #7FC1CE;
+  border: 1px #7FC1CE solid;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.UpcomingShowsWidget a.btn:hover {
+  padding: 2px;
+  margin: 0;
+  color: #000;
+  border: 1px #000 solid;
+}
+.UpcomingShowsWidget a.btn.inactive {
+  padding: 2px;
+  margin: 0;
+  color: #ccc;
+  border: 1px #ccc solid;
+}
+.UpcomingShowsWidget p { font-size: 1rem; margin: 0; padding: 0; }
+.UpcomingShowsWidget h4 { margin: 0; padding: 0; }
+.tour-links { float: right; }
+
+.tour-date, .no-pad { padding: 0; }
+.tour-date, .UpcomingShowsWidget li { border-bottom: 1px #ccc solid; padding: 10px 0; }
+.tour-date:first-of-type, .UpcomingShowsWidget li:first-of-type { padding-top: 0px; }
+.tour-date:last-of-type, .UpcomingShowsWidget li:last-of-type { border-bottom: none; padding-bottom: 0px; }
+/*#rsvp a, #tickets a { float: right; text-align: right; }*/
+#location h4, #date p, #day p { margin: 0; padding: 0; }
+
+/*--------------------------------------------------------------
+SOCIAL MEDIA WIDGET
+--------------------------------------------------------------*/
+.icon-btn, .icon-btn:visited {
+  color: #000;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.icon-btn:hover { color: #7FC1CE; }
 
 /*--------------------------------------------------------------
 FOOTER
 --------------------------------------------------------------*/
 
-footer { text-align: center; }
-.site-footer { margin-bottom: 102px; }
-.bottom-fixed {
-  margin-bottom: 0;
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-  /*display: none;*/
+footer { text-align: center; font-family: 'latolight'; }
+footer a {
+  -webkit-transition: all 0;
+  -moz-transition: all 0;
+  -ms-transition: all 0;
+  -o-transition: all 0;
+  transition: all 0;
 }
+footer a, footer a:visited { color: black; }
+footer a:hover { border-bottom: 1px black solid; }
 
-.tour-date, .no-pad { padding: 0; }
-.tour-date { border-bottom: 1px #ccc solid; padding: 10px 0; }
-.tour-date:first-of-type { padding-top: 0px; }
-.tour-date:last-of-type { border-bottom: none; }
-/*#rsvp a, #tickets a { float: right; text-align: right; }*/
-#location h4, #date p, #day p { margin: 0; padding: 0; }
+/*--------------------------------------------------------------
+MUSIC AND VIDEOS
+--------------------------------------------------------------*/
 
 .embed-container {
   position: relative;
@@ -209,4 +276,49 @@ footer { text-align: center; }
 }
 
 #music-links h4 { float: right; }
+
+/*-----------------------------------------------
+INDEX PAGINATION
+----------------------------------------------- */
+
+/* The containing box with a nice white background */
+.paging-navigation {
+  font-family: sans-serif;
+  background: #fff;
+  background: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+/* Remove bullets and list indentation */
+.paging-navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the list items appear horizontally */
+.paging-navigation li {
+  display: inline;
+}
+
+/* Give each link and the current item some padding to make them easy to click */
+a.page-numbers,
+span.page-numbers {
+  padding: .3em .7em;
+  color: #333;
+  color: hsl(0, 0%, 20%);
+}
+
+/* Link hover state */
+a:hover.page-numbers {
+  color: #000;
+  color: hsl(0, 0%, 0%);
+}
+
+/* Current page bold and dark */
+.paging-navigation .current {
+  font-weight: bold;
+  color: #000;
+  color: hsl(0, 0%, 0%);
+}
 

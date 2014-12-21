@@ -115,6 +115,15 @@ function aukland_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'ContactSidebar', 'aukland' ),
+		'id'            => 'contact-sidebar',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'aukland_widgets_init' );
 
@@ -134,7 +143,6 @@ function aukland_scripts() {
 
 	/* Add Foundation JS */
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/foundation.min.js', array( 'jquery' ), '1', true );
-	// wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/foundation/foundation.topbar.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'foundation-modernizr-js', get_template_directory_uri() . '/foundation/js/vendor/modernizr.js', array( 'jquery' ), '1', true );
 
 	/* Foundation Init JS */
@@ -187,6 +195,91 @@ function add_oembed_soundcloud(){
 }
 add_action('init','add_oembed_soundcloud');
 
+function register_cpt_album() {
+
+    $labels = array( 
+        'name' => _x( 'Albums', 'album' ),
+        'singular_name' => _x( 'Album', 'album' ),
+        'add_new' => _x( 'Add New', 'album' ),
+        'add_new_item' => _x( 'Add New Album', 'album' ),
+        'edit_item' => _x( 'Edit Album', 'album' ),
+        'new_item' => _x( 'New Album', 'album' ),
+        'view_item' => _x( 'View Album', 'album' ),
+        'search_items' => _x( 'Search Albums', 'album' ),
+        'not_found' => _x( 'No albums found', 'album' ),
+        'not_found_in_trash' => _x( 'No albums found in Trash', 'album' ),
+        'parent_item_colon' => _x( 'Parent Album:', 'album' ),
+        'menu_name' => _x( 'Albums', 'album' ),
+    );
+
+    $args = array( 
+        'labels' => $labels,
+        'hierarchical' => true,
+        'description' => 'Albums and Singles released by Aukland',
+        'supports' => array( 'title', 'custom-fields' ),
+        
+        'public' => false,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        
+        
+        'show_in_nav_menus' => false,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => false,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => array("slug" => "albums"), // permalink structure
+        'capability_type' => 'post'
+    );
+
+    register_post_type( 'album', $args );
+}
+
+add_action( 'init', 'register_cpt_album' );
+
+function register_cpt_video() {
+
+    $labels = array( 
+        'name' => _x( 'Videos', 'video' ),
+        'singular_name' => _x( 'Video', 'video' ),
+        'add_new' => _x( 'Add New', 'video' ),
+        'add_new_item' => _x( 'Add New Video', 'video' ),
+        'edit_item' => _x( 'Edit Video', 'video' ),
+        'new_item' => _x( 'New Video', 'video' ),
+        'view_item' => _x( 'View Video', 'video' ),
+        'search_items' => _x( 'Search Videos', 'video' ),
+        'not_found' => _x( 'No videos found', 'video' ),
+        'not_found_in_trash' => _x( 'No videos found in Trash', 'video' ),
+        'parent_item_colon' => _x( 'Parent Video:', 'video' ),
+        'menu_name' => _x( 'Videos', 'video' ),
+    );
+
+    $args = array( 
+        'labels' => $labels,
+        'hierarchical' => true,
+        'description' => 'Music videos released by Aukland',
+        'supports' => array( 'title', 'custom-fields' ),
+        
+        'public' => false,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        
+        
+        'show_in_nav_menus' => false,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => false,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => array("slug" => "videos"), // permalink structure
+        'capability_type' => 'post'
+    );
+
+    register_post_type( 'video', $args );
+}
+
+add_action( 'init', 'register_cpt_video' );
 
 // Content limit
 function content($limit) {

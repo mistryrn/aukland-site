@@ -1,7 +1,7 @@
 <?php
 
 /**
-* Template Name: Music Page
+* Template Name: Videos Page
 */
 
 get_header(); ?>
@@ -13,12 +13,12 @@ get_header(); ?>
       <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <h3>MUSIC</h3>
+            <h3>VIDEOS</h3>
 
             <ul class="medium-block-grid-2">
 
             <?php
-            $type = 'album';
+            $type = 'video';
             $args=array(
               'post_type' => $type,
               'post_status' => 'private',
@@ -34,23 +34,8 @@ get_header(); ?>
               while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
               <li>
-                <div class="small-10 columns no-pad">
-                  <h4><?php echo get_field('title'); echo " "; $time=strtotime(get_field('release_date')); $year = date("Y",$time); echo "($year)"; ?></h4>
-                </div>
-                <div class="small-2 columns no-pad" id="music-links">
-                  <h4>
-                    <?php
-                    if(get_field('download_link')) {
-                      echo "<a href='"; echo (get_field('download_link')); echo "'><i class='fi-download'></i></a> ";
-                    }
-                    if(get_field('itunes_link')) {
-                      echo "<a href='"; echo (get_field('itunes_link')); echo "'><i class='fi-shopping-cart'></i></a> ";
-                    }
-                    ?>
-                  </h4>
-                </div>
-                <img src="<?php the_field('album_art'); ?>">
-                <?php the_field('bandcamp_embed_code'); ?>
+                <h4><?php echo get_field('title'); echo " "; $time=strtotime(get_field('release_date')); $year = date("Y",$time); echo "($year)"; ?></h4>
+                <?php the_field('video_embed_code'); ?>
               </li>
 
               <?php endwhile;
