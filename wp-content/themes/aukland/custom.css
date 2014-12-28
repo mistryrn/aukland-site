@@ -143,13 +143,18 @@ MAIN PAGE HERO
 .main-hero {
   margin-top: -50px;
   background: url(images/bg3.jpg) no-repeat top #000;
-  background-attachment: fixed;
   height: 100vmin;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-position: center 0px;
+}
+
+@media only screen and (min-width: 40.01em) {
+  .main-hero {
+    background-attachment: fixed;
+  }   
 }
 
 .main-hero h1 {
