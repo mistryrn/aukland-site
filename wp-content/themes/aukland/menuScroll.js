@@ -4,7 +4,7 @@ var maintop = jQuery('#main').offset().top - 18;
 // jQuery('#mobile-nav').addClass('override');
 // jQuery('.override').hide();
 // on scroll
-jQuery(window).on('scroll', function() {
+jQuery(window).on('scroll gesturechange touchmove', function() {
 
     // round here to reduce some workload
     stop = Math.round(jQuery(window).scrollTop());

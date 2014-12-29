@@ -28,11 +28,11 @@
 			<a id="menu-toggle" class="anchor-link" href="">MENU</a>
 			<ul class="simple-toggle" id="menu">
 			    <li><h1 class="show-for-medium-up"><a class="menu-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></li>
-				<li><a href="http://localhost/aukland-site/news/">NEWS</a></li>
-				<li><a href="http://localhost/aukland-site/tour/">TOUR</a></li>
-				<li><a href="http://localhost/aukland-site/music/">MUSIC</a></li>
-				<li><a href="http://localhost/aukland-site/videos/">VIDEOS</a></li>
-				<li><a href="http://localhost/aukland-site/contact/">CONTACT</a></li>
+				<li><a href="http://192.168.2.115/aukland-ip/news/">NEWS</a></li>
+				<li><a href="http://192.168.2.115/aukland-ip/tour/">TOUR</a></li>
+				<li><a href="http://192.168.2.115/aukland-ip/music/">MUSIC</a></li>
+				<li><a href="http://192.168.2.115/aukland-ip/videos/">VIDEOS</a></li>
+				<li><a href="http://192.168.2.115/aukland-ip/contact/">CONTACT</a></li>
 			</ul>
 		</nav>
 	</header><!-- #masthead -->
