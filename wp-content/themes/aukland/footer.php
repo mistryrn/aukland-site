@@ -22,6 +22,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script>window.viewportUnitsBuggyfill.init();</script>
 </body>
 </html>

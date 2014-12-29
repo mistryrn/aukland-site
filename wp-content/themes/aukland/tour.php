@@ -53,16 +53,12 @@ get_header(); ?>
                     echo "</div>";
                   // Actions
                     echo "<div class='small-2 medium-2 large-2 columns no-pad' id='actions'>";
-                      echo "<div class='small-12 large-6 columns no-pad' id='rsvp'>";
-                        echo "<a href='$event->facebook_rsvp_url'>RSVP</a> "; // rsvp
-                      echo "</div>";
-                      echo "<div class='small-12 large-6 columns no-pad' id='tickets'>";
+                        echo "<a href='$event->facebook_rsvp_url' id='rsvp'>RSVP</a> "; // rsvp
                         if ($event->ticket_url) {
                             echo "<a href='$event->ticket_url'>Tickets</a>"; // tickets
                         } else {
                             echo "<a href='' class='inactive'>Tickets</a>"; // tickets (none)
                         }
-                      echo "</div>";
                     echo "</div>";
                   echo "</div>";
                   $i++;

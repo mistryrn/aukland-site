@@ -180,7 +180,7 @@ MAIN PAGE HERO
 }
 
 
-#main-content { min-height: 90vmin; padding-top: 30px; }
+#main-content { min-height: 90vh; padding-top: 30px; }
 
 
 /*--------------------------------------------------------------
@@ -212,7 +212,7 @@ TOUR DATES
   text-decoration: none;
 }
 
-.UpcomingShowsWidget a.btn, #rsvp a, #tickets a {
+.UpcomingShowsWidget a.btn, #actions a {
   padding: 5px;
   margin: 0;
   color: #000;
@@ -223,15 +223,16 @@ TOUR DATES
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   font-size: 75%;
+  display: inline-block;
 }
-.UpcomingShowsWidget a.btn:hover, #rsvp a:hover, #tickets a:hover {
+.UpcomingShowsWidget a.btn:hover, #actions a:hover {
   padding: 5px;
   margin: 0;
   color: #fff;
   background-color: #000;
 }
 .UpcomingShowsWidget a.btn.inactive, .UpcomingShowsWidget a.btn.inactive:hover, 
-#rsvp a.inactive, #rsvp a.inactive:hover, #tickets a.inactive, #tickets a.inactive:hover {
+#actions a.inactive, #actions a.inactive:hover {
   padding: 5px;
   margin: 0;
   color: #ccc;
@@ -241,13 +242,12 @@ TOUR DATES
 .UpcomingShowsWidget p { font-size: 1rem; margin: 0; padding: 0; }
 .UpcomingShowsWidget h4 { margin: 0; padding: 0; }
 .tour-links { float: right; }
-#rsvp { padding-bottom: 4px; }
+a#rsvp { margin-bottom: 4px; }
 .tour-date, .no-pad { padding: 0; }
 .tour-date, .UpcomingShowsWidget li { border-bottom: 1px #ccc solid; padding: 10px 0; }
 .tour-date li { vertical-align: middle; }
 .tour-date:first-of-type, .UpcomingShowsWidget li:first-of-type { padding-top: 0px; }
 .tour-date:last-of-type, .UpcomingShowsWidget li:last-of-type { border-bottom: none; padding-bottom: 0px; }
-/*#rsvp a, #tickets a { float: right; text-align: right; }*/
 #location h4, #date p, #day p { margin: 0; padding: 0; }
 
 /*--------------------------------------------------------------
@@ -280,6 +280,7 @@ footer a {
 }
 footer a, footer a:visited { color: black; }
 footer a:hover { border-bottom: 1px black solid; }
+.site-info p { margin-bottom: 0; padding-bottom: 9px; }
 
 /*--------------------------------------------------------------
 MUSIC AND VIDEOS

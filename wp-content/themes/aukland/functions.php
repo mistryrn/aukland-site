@@ -145,8 +145,11 @@ function aukland_scripts() {
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/foundation.min.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'foundation-modernizr-js', get_template_directory_uri() . '/foundation/js/vendor/modernizr.js', array( 'jquery' ), '1', true );
 
-	/* Foundation Init JS */
-	wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
+    /* Foundation Init JS */
+    wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
+
+    /* Viewport Units Buggyfill JS */
+    wp_enqueue_script( 'viewport-units-buggyfill-js', get_template_directory_uri() . '/viewport-units-buggyfill.js', array( 'jquery' ), '1', true );
 
 	/* Menu Toggle JS */
 	wp_enqueue_script( 'menu-toggle-js', get_template_directory_uri() . '/menuToggle.js', array( 'jquery' ), '1', true );
