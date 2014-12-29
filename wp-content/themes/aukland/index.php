@@ -17,7 +17,7 @@ get_header(); ?>
 		<div class="overlay">
 			<div class="row">
 				<div class="contain-to-grid">
-					<h1 id="main">Aukland</h1>
+					<h1 id="aukland">Aukland</h1>
 				</div>
 			</div>
 		</div>
