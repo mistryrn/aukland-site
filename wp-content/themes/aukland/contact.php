@@ -8,7 +8,7 @@ get_header(); ?>
 
 <div id="main-content" class="row" data-equalizer><!-- Foundation .row start -->
 
-    <div class="small-12 medium-8 columns" data-equalizer-watch><!-- Foundation .columns start -->
+    <div class="small-12 medium-7 large-8 columns" data-equalizer-watch><!-- Foundation .columns start -->
         <img id="bio-pic" src="<?php bloginfo('template_directory'); ?>/images/bio-pic.jpg">
         <div class="hide-for-small">
           <p id="paragraph-1">It’s been a jam-packed year for Aukland. Since the band’s introductory show in the summer of 2013, the indie-rock outfit has garnered itself a significant number of accomplishments. From sharing the stage with bands and artists including Tokyo Police Club, Hollerado, The Trews, and Alyssa Reid, to making appearances at some of the largest festivals in Ontario, to the recent recording and release of their debut EP, Aukland is carving a name out for itself in the Canadian music scene. Based out of Mississauga and consisting of Jeff Campana [guitar, vocals], Dave Setton [drums, vocals], Sean Sroka [vocals, guitar], and Andrew Thomas [bass, vocals], Aukland is a band whose success can be traced back to their nose-to-the-fretboard ethos.</p>
@@ -17,7 +17,7 @@ get_header(); ?>
         </div>
     </div><!-- Foundation .columns end -->
 
-    <div id="contact-info" class="small-12 medium-4 columns">
+    <div id="contact-info" class="small-12 medium-5 large-4 columns">
       <h3 id="contact">CONTACT</h3>
       <h4>Management &amp; Bookings:</h4>
       <h4 id="lucas">Lucas Canzona</h4>

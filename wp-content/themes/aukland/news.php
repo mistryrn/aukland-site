@@ -8,7 +8,7 @@ get_header(); ?>
 
 <div id="main-content" class="row" data-equalizer><!-- Foundation .row start -->
 
-    <div class="small-12 medium-8 columns" data-equalizer-watch><!-- Foundation .columns start -->
+    <div class="small-12 medium-7 large-8 columns" data-equalizer-watch><!-- Foundation .columns start -->
 
       <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
@@ -54,7 +54,7 @@ get_header(); ?>
 
     </div><!-- Foundation .columns end -->
 
-    <div class="small-12 medium-4 columns sidebar" data-equalizer-watch><!-- Foundation .columns start -->
+    <div class="small-12 medium-5 large-4 columns sidebar" data-equalizer-watch><!-- Foundation .columns start -->
       
       <?php get_sidebar(); ?>
 
