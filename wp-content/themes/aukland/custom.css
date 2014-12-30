@@ -28,7 +28,8 @@ FONTS
 }
 
 h1 { font-family: 'intro_regular'; }
-h2, h3, h4, nav ul li a, .anchor-link { font-family: 'latolight'; }
+h2, h3, h4, nav ul li a, .anchor-link, footer p { font-family: 'latolight'; }
+p, .posted-on { font-family: Helvetica, Arial, sans-serif; font-weight: lighter; }
 @media only screen and (min-width: 40.063em) {
   h4 {
    font-size: 1.3rem; 
@@ -282,6 +283,8 @@ footer a:hover { border-bottom: 1px black solid; }
 MUSIC AND VIDEOS
 --------------------------------------------------------------*/
 
+.release { padding-bottom: 1rem; }
+
 .embed-container {
   position: relative;
   padding-bottom: 79.19%;
@@ -297,9 +300,11 @@ MUSIC AND VIDEOS
   height: 100%;
 }
 
-#music-links h4 { float: right; }
+#music-links h4 { /*float: right;*/ }
 #music-links a, #music-links a:visited { color: black; }
 #music-links a:hover { color: #008cba; }
+
+/*#artwork { max-width: 417px; }*/
 
 /*--------------------------------------------------------------
 CONTACT

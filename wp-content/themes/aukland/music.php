@@ -15,8 +15,6 @@ get_header(); ?>
 
             <h3>MUSIC</h3>
 
-            <ul class="medium-block-grid-2">
-
             <?php
             $type = 'album';
             $args=array(
@@ -33,32 +31,44 @@ get_header(); ?>
             if( $my_query->have_posts() ) {
               while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-              <li>
-                <div class="small-10 columns no-pad">
-                  <h4><?php echo get_field('title'); echo " "; $time=strtotime(get_field('release_date')); $year = date("Y",$time); echo "($year)"; ?></h4>
-                </div>
-                <div class="small-2 columns no-pad" id="music-links">
-                  <h4>
+              <div class="row release">
+                <div class="small-12 medium-7 medium-push-5 columns">
+                  <h4><?php echo get_field('title'); ?></h4>
+                  <div class="show-for-medium-up" id="music-links">
+                    <p><?php $time=strtotime(get_field('release_date')); $release_date = date("F jS, Y",$time); echo "Released $release_date"; ?></p>
+                    <p><?php the_field('release_notes'); ?></p>
                     <?php
-                    if(get_field('download_link')) {
-                      echo "<a href='"; echo (get_field('download_link')); echo "'><i class='fi-download'></i></a> ";
-                    }
                     if(get_field('itunes_link')) {
-                      echo "<a href='"; echo (get_field('itunes_link')); echo "'><i class='fi-shopping-cart'></i></a> ";
+                      echo "<p><a href='"; echo (get_field('itunes_link')); echo "'>Buy <i class='fi-shopping-cart'></i></a></p>";
+                    }
+                    if(get_field('download_link')) {
+                      echo "<p><a href='"; echo (get_field('download_link')); echo "'>Download <i class='fi-download'></i></a></p>";
                     }
                     ?>
-                  </h4>
                 </div>
-                <img src="<?php the_field('album_art'); ?>">
-                <?php the_field('bandcamp_embed_code'); ?>
-              </li>
+                </div>
+                <div id="artwork" class="small-12 medium-5 medium-pull-7 columns">
+                  <img src="<?php the_field('album_art'); ?>">
+                  <?php the_field('bandcamp_embed_code'); ?>
+                </div>
+                <div class="small-12 columns hide-for-medium-up" id="music-links">
+                    <p><?php $time=strtotime(get_field('release_date')); $release_date = date("F jS, Y",$time); echo "Released $release_date"; ?></p>
+                    <p><?php the_field('release_notes'); ?></p>
+                    <?php
+                    if(get_field('itunes_link')) {
+                      echo "<p><a href='"; echo (get_field('itunes_link')); echo "'>Buy <i class='fi-shopping-cart'></i></a></p>";
+                    }
+                    if(get_field('download_link')) {
+                      echo "<p><a href='"; echo (get_field('download_link')); echo "'>Download <i class='fi-download'></i></a></p>";
+                    }
+                    ?>
+                </div>
+              </div>
 
               <?php endwhile;
             }
             wp_reset_query();  // Restore global post data stomped by the_post().
             ?>
-
-            </ul>
             
         </main><!-- #main -->
       </div><!-- #primary -->
