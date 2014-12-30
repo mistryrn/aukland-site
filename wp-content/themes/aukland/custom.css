@@ -274,7 +274,7 @@ footer a {
   -o-transition: all 0;
   transition: all 0;
 }
-footer a, footer a:visited { color: black; }
+footer a, footer a:hover, footer a:visited { color: black; }
 footer a:hover { border-bottom: 1px black solid; }
 .site-info p { margin-bottom: 0; padding-bottom: 9px; }
 
