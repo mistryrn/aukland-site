@@ -76,7 +76,8 @@ get_header(); ?>
               </div>
               <div class="content" id="archive-tab">
                 <?php
-                $response = file_get_contents("http://api.bandsintown.com/artists/Aukland/events.json?api_version=2.0&date=all&app_id=AUKLANDSITE");
+                $now = date('Y-m-d', time());
+                $response = file_get_contents("http://api.bandsintown.com/artists/Aukland/events.json?api_version=2.0&date=2013-09-19,$now&app_id=AUKLANDSITE");
                 $response = json_decode($response);
                 $i = 0;
                 foreach ($response as $event) {
