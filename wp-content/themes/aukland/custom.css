@@ -2,11 +2,6 @@
 FONTS
 --------------------------------------------------------------*/
 
-body {
-  /* Webkit font fix, prevents fonts from displaying too thin */
-  /*-webkit-font-smoothing: subpixel-antialiased;*/
-}
-
 @font-face {
     font-family: 'intro_regular';
     src: url('fonts/intro-webfont.eot');
@@ -62,8 +57,7 @@ TOP NAV MENU STLYING
 .nav { 
   min-height: 61px;
   line-height: 61px;
-  width:100%; 
-  /*border-bottom: 1px solid #ccc;*/
+  width:100%;
   background-color: transparent;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
@@ -126,7 +120,6 @@ nav ul li h1 a { font-family: 'intro_regular'; }
 
 ul.simple-toggle li h1 a.menu-logo, #mobile-nav, #sc {
   display: none;
-  /*height: 0px;*/
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
@@ -167,21 +160,15 @@ MAIN PAGE HERO
 
 .overlay {
   width: 100%;
-  height: 100vmin;
-
-  
+  height: 100vmin;  
   background: -moz-linear-gradient(top,  rgba(219,39,55,0.65) 0%, rgba(216,123,131,0.65) 75%, rgba(255,255,255,0.9) 97%, rgba(255,255,255,1.0) 100%); /* FF3.6+ */
-/*  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(219,39,55,0.65)), color-stop(80%,rgba(216,123,131,0.65)), color-stop(100%,rgba(255,255,255,0.9))); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top,  rgba(219,39,55,0.65) 0%,rgba(216,123,131,0.65) 75%,rgba(255,255,255,0.9) 97%, rgba(255,255,255,1.0) 100%); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(top,  rgba(219,39,55,0.65) 0%,rgba(216,123,131,0.65) 75%,rgba(255,255,255,0.9) 97%, rgba(255,255,255,1.0) 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top,  rgba(219,39,55,0.65) 0%,rgba(216,123,131,0.65) 75%,rgba(255,255,255,0.9) 97%, rgba(255,255,255,1.0) 100%); /* IE10+ */
   background: linear-gradient(to bottom,  rgba(219,39,55,0.65) 0%,rgba(216,123,131,0.65) 75%,rgba(255,255,255,0.9) 97%, rgba(255,255,255,1.0) 100%); /* W3C */
-
 }
 
-
 #main-content { min-height: 90vh; padding-top: 30px; }
-
 
 /*--------------------------------------------------------------
 MAIN PAGE CONTENT
@@ -206,6 +193,15 @@ SIDEBAR
 /*--------------------------------------------------------------
 TOUR DATES
 --------------------------------------------------------------*/
+
+.tabs dd a {
+  background-color: white;
+  padding: 0;
+  margin: 0 1rem;
+  border-bottom: 2px #fff solid;
+}
+.tabs dd.active a, .tabs dd a:hover { background-color: white; border-bottom: 2px #000 solid; }
+.tabs h4 { margin: 0 0 0.2rem 0; }
 
 .UpcomingShowsWidget a, .UpcomingShowsWidget a:visited {
   color: black;
@@ -240,15 +236,15 @@ TOUR DATES
   background-color: #fff;
 }
 .UpcomingShowsWidget p { font-size: 1rem; margin: 0; padding: 0; }
-.UpcomingShowsWidget h4 { margin: 0; padding: 0; }
+.UpcomingShowsWidget h4, #location h4, #date p, #day p { margin: 0; padding: 0; }
 .tour-links { float: right; }
-a#rsvp { margin-bottom: 4px; }
+a#rsvp, a:hover#rsvp, a:visited#rsvp { margin-bottom: 4px; }
 .tour-date, .no-pad { padding: 0; }
 .tour-date, .UpcomingShowsWidget li { border-bottom: 1px #ccc solid; padding: 10px 0; }
 .tour-date li { vertical-align: middle; }
 .tour-date:first-of-type, .UpcomingShowsWidget li:first-of-type { padding-top: 0px; }
 .tour-date:last-of-type, .UpcomingShowsWidget li:last-of-type { border-bottom: none; padding-bottom: 0px; }
-#location h4, #date p, #day p { margin: 0; padding: 0; }
+.top-pad { margin-top: 0.2rem; }
 
 /*--------------------------------------------------------------
 SOCIAL MEDIA WIDGET
