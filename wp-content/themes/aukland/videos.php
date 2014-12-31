@@ -15,9 +15,8 @@ get_header(); ?>
 
             <h3>VIDEOS</h3>
 
-            <ul class="medium-block-grid-2">
-
             <?php
+            $vidCount = 0;
             $type = 'video';
             $args=array(
               'post_type' => $type,
@@ -32,18 +31,17 @@ get_header(); ?>
             $my_query = new WP_Query($args);
             if( $my_query->have_posts() ) {
               while ($my_query->have_posts()) : $my_query->the_post(); ?>
-
-              <li>
+              <?php $vidCount++; if ($vidCount == sizeof($my_query->posts) && sizeof($my_query->posts) % 2 != 0) { echo "<div class='small-12 medium-6 columns no-pad end'>"; } else { echo "<div class='small-12 medium-6 columns no-pad'>"; }  ?>
                 <h4><?php echo get_field('title'); echo " "; $time=strtotime(get_field('release_date')); $year = date("Y",$time); echo "($year)"; ?></h4>
-                <?php the_field('video_embed_code'); ?>
-              </li>
+                <div class="flex-video widescreen small-12 medium-11">
+                  <?php the_field('video_embed_code'); ?>
+                </div>
+              </div>
 
               <?php endwhile;
             }
             wp_reset_query();  // Restore global post data stomped by the_post().
             ?>
-
-            </ul>
             
         </main><!-- #main -->
       </div><!-- #primary -->

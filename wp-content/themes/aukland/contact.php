@@ -19,9 +19,9 @@ get_header(); ?>
 
     <div id="contact-info" class="small-12 medium-5 large-4 columns">
       <h3 id="contact">CONTACT</h3>
-      <h4>Management &amp; Bookings:</h4>
+      <h5>Management &amp; Bookings</h5>
       <h4 id="lucas">Lucas Canzona</h4>
-      <a  id="email" href="mailto:aukland@thesoundofchange.org">aukland@thesoundofchange.org</a>
+      <h5><a  id="email" href="mailto:aukland@thesoundofchange.org">aukland@thesoundofchange.org</a></h5>
       <?php dynamic_sidebar('contact-sidebar'); ?>
     </div>
 

@@ -28,8 +28,9 @@ FONTS
 }
 
 h1 { font-family: 'intro_regular'; }
-h2, h3, h4, nav ul li a, .anchor-link, footer p { font-family: 'latolight'; }
-p, .posted-on { font-family: Helvetica, Arial, sans-serif; font-weight: lighter; }
+h2, h3, h4, h5, nav ul li a, .anchor-link, footer p, .nav-links a { font-family: 'latolight'; }
+h3, h4, h4 a, h5 a, article a, p a, .posted-on a time, .nav-links a, .nav-links a:visited { color: #222; }
+p, .posted-on a { font-family: Helvetica, Arial, sans-serif; font-weight: lighter; color: #444; }
 @media only screen and (min-width: 40.063em) {
   h4 {
    font-size: 1.3rem; 
@@ -54,7 +55,13 @@ TOP NAV MENU STLYING
 --------------------------------------------------------------*/
 
 .contain-to-grid { background: none; }
-
+.notransition { 
+  -webkit-transition: none !important; 
+  -moz-transition: none !important; 
+  -o-transition: none !important; 
+  -ms-transition: none !important; 
+  transition: none !important; 
+}
 .nav { 
   min-height: 61px;
   line-height: 61px;
@@ -66,9 +73,7 @@ TOP NAV MENU STLYING
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-.nav.past-aukland {
-  background-color: rgba(219, 39, 55, 0.9);
-}
+.nav.past-aukland { background-color: rgba(219, 39, 55, 0.9); }
 ul.simple-toggle { list-style: none; padding: 0px; margin: 0px; text-align: center; }
 ul.simple-toggle li { display: inline-block; text-align: left; vertical-align: top; }
 ul.simple-toggle li a { display: block; margin: 18px 10px; text-decoration: none; color: #fff; border-bottom: 1px solid rgba(255, 255, 255, 0); transition: border-color .3s; }
@@ -86,18 +91,10 @@ ul.simple-toggle li h1 a:hover, #mobile-nav a:hover { text-decoration: none; bor
   .anchor-link, #mobile-nav { display: block; }
   .anchor-link, .anchor-link:hover, .anchor-link:visited { color: #fff; text-decoration: none; }
 
-  nav.open {
-    background-color: rgba(219, 39, 55, 0.9);
-    -webkit-transition: all 0;
-    -moz-transition: all 0;
-    -ms-transition: all 0;
-    -o-transition: all 0;
-    transition: all 0;
-  }
+  nav.open { background-color: rgba(219, 39, 55, 0.9); }
 
   ul.open { 
-    background-color: rgba(219, 39, 55, 0.75);
-    /*box-shadow: 2px 2px 3px #444444;*/
+    background-color: rgba(219, 39, 55, 0.8);
     display: block;
     list-style: none outside none;
     margin: 0;
@@ -119,7 +116,7 @@ ul.simple-toggle li h1 a:hover, #mobile-nav a:hover { text-decoration: none; bor
 nav ul li h1 { margin: 0; }
 nav ul li h1 a { font-family: 'intro_regular'; }
 
-ul.simple-toggle li h1 a.menu-logo, #mobile-nav, #sc {
+ul.simple-toggle li h1 a.menu-logo, #mobile-nav {
   display: none;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
@@ -179,9 +176,11 @@ MAIN PAGE CONTENT
 article a, article a:visited { text-decoration: none; color: black; }
 figure { margin: 0; }
 .entry-title { margin-bottom: 0; }
-.entry-title a:hover, .entry-content p a:hover { color: #008CBA; }
-.entry-content { margin-top: 0.25em; }
+.entry-title a:hover, .entry-content p a:hover, .nav-links a:hover { color: #008CBA; }
+.entry-content { margin-top: 0.5rem; }
 .entry-content p { margin-bottom: 0; }
+.entry-content p a { color: #000; }
+.entry-content img { padding-bottom: 1rem; }
 .continue { font-family: 'latolight'; padding-top: 5px; }
 .wp-caption-text { font-family: 'latolight'; margin: 0; padding: 0 5px; text-align: left; }
 
@@ -198,22 +197,22 @@ TOUR DATES
 .tabs dd a {
   background-color: white;
   padding: 0;
-  margin: 0 1rem;
+  margin: 0 1rem 0 0;
   border-bottom: 2px #fff solid;
 }
 .tabs dd.active a, .tabs dd a:hover { background-color: white; border-bottom: 2px #000 solid; }
 .tabs h4 { margin: 0 0 0.2rem 0; }
 
 .UpcomingShowsWidget a, .UpcomingShowsWidget a:visited {
-  color: black;
+  color: #222;
   text-decoration: none;
 }
 
 .UpcomingShowsWidget a.btn, #actions a {
-  padding: 5px;
+  padding: 2px 5px;
   margin: 0;
-  color: #000;
-  border: 1px #000 solid;
+  color: #222;
+  border: 1px #222 solid;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
@@ -223,21 +222,21 @@ TOUR DATES
   display: inline-block;
 }
 .UpcomingShowsWidget a.btn:hover, #actions a:hover {
-  padding: 5px;
+  padding: 2px 5px;
   margin: 0;
   color: #fff;
-  background-color: #000;
+  background-color: #444;
 }
 .UpcomingShowsWidget a.btn.inactive, .UpcomingShowsWidget a.btn.inactive:hover, 
 #actions a.inactive, #actions a.inactive:hover {
-  padding: 5px;
+  padding: 2px 5px;
   margin: 0;
   color: #ccc;
   border: 1px #ccc solid;
   background-color: #fff;
 }
 .UpcomingShowsWidget p { font-size: 1rem; margin: 0; padding: 0; }
-.UpcomingShowsWidget h4, #location h4, #date p, #day p { margin: 0; padding: 0; }
+.UpcomingShowsWidget h5, #location h4, #date p, #day p { margin: 0; padding: 0; }
 .tour-links { float: right; }
 a#rsvp, a:hover#rsvp, a:visited#rsvp { margin-bottom: 4px; }
 .tour-date, .no-pad { padding: 0; }
@@ -251,7 +250,7 @@ a#rsvp, a:hover#rsvp, a:visited#rsvp { margin-bottom: 4px; }
 SOCIAL MEDIA WIDGET
 --------------------------------------------------------------*/
 .icon-btn, .icon-btn:visited {
-  color: #000;
+  color: #222;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
@@ -267,13 +266,6 @@ FOOTER
 footer {
   text-align: center;
   font-family: 'latolight';
-}
-footer a {
-  -webkit-transition: all 0;
-  -moz-transition: all 0;
-  -ms-transition: all 0;
-  -o-transition: all 0;
-  transition: all 0;
 }
 footer a, footer a:hover, footer a:visited { color: black; }
 footer a:hover { border-bottom: 1px black solid; }
@@ -304,12 +296,10 @@ MUSIC AND VIDEOS
 #music-links a, #music-links a:visited { color: black; }
 #music-links a:hover { color: #008cba; }
 
-/*#artwork { max-width: 417px; }*/
-
 /*--------------------------------------------------------------
 CONTACT
 --------------------------------------------------------------*/
-#contact-info h3, #contact-info h4 { margin: 0.5%; }
+#contact-info h3, #contact-info h4, #contact-info h5 { margin: 0.5%; }
 #email { font-size: 75%; }
 #email, #email:visited { color: black; }
 #email:hover { color: #008cba; }

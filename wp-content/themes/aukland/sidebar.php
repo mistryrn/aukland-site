@@ -10,7 +10,9 @@
     <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
     <?php
     if (is_page('Contact')) {
-      $no_sidebar = !dynamic_sidebar('contact-sidebar'); // Attempt showing page sidebar
+      $no_sidebar = !dynamic_sidebar('contact-sidebar'); // Attempt showing contact page sidebar
+    } elseif(is_single()) {
+      $no_sidebar = !dynamic_sidebar('single-sidebar'); // Attempt showing single page sidebar
     } else {
       $no_sidebar = !dynamic_sidebar('sidebar-1'); // Fall back to showing generic sidebar
     }

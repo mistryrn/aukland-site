@@ -124,6 +124,15 @@ function aukland_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+    register_sidebar( array(
+        'name'          => __( 'SingleSidebar', 'aukland' ),
+        'id'            => 'single-sidebar',
+        'description'   => '',
+        'before_widget' => '<div id="%1$s" class="small-12 medium-6 columns widget %2$s data-equalizer-watch">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
 }
 add_action( 'widgets_init', 'aukland_widgets_init' );
 
@@ -298,3 +307,20 @@ function content($limit) {
   $content = preg_replace('/\[.+\]/','', $content);
   return $content;
 }
+
+/**
+ * Filter video oembeds and wrap with Foundations flex-video
+ */
+function foundation_embed_oembed_html( $html, $url, $attr, $post_id ) {
+    $matches = array(
+            'youtube.com',
+            'vimeo.com',
+            'youtu.be'
+        );
+    foreach ( $matches as $match ) {
+        if ( false !== stripos( $url, $match ) )
+            return '<div class="flex-video widescreen">' . $html . '</div>';
+    }
+    return $html;
+}
+add_filter('embed_oembed_html', 'foundation_embed_oembed_html', 99, 4);

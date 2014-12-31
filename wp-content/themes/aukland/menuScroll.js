@@ -3,7 +3,6 @@ jQuery(window).load(function() {
     if(! jQuery('.nav').hasClass('regular') ) {
         // Get position of top of #aukland element, set as 'maintop'
         var maintop = jQuery('#aukland').offset().top - 21;
-        console.log('used ' + maintop);
 
         jQuery(window).on('scroll gesturechange touchmove', function() {
             stop = Math.round(jQuery(window).scrollTop());
@@ -22,7 +21,6 @@ jQuery(window).load(function() {
         // Update 'maintop' on window resize or orientation change
         function updateVars() {
             maintop = jQuery('#aukland').offset().top - 21;
-            console.log('detected! should be ' + maintop);
         }
         // Detect window resize or orientation change
         jQuery(window).on('resize orientationchange', function() {

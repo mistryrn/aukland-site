@@ -14,7 +14,7 @@
         <div class="row"><!-- Foundation .row start -->
             <div class="small-12 columns"><!-- Foundation .columns start -->
         		<div class="site-info">
-                    <p>&copy; <?php echo date("Y"); echo " "; bloginfo('name'); ?> - Designed by <a href="http://www.rakeshmistry.ca/">Rakesh Mistry</a></p>
+                    <p>&copy; <?php echo date("Y"); echo " "; bloginfo('name'); ?> - Designed by <a class="notransition" href="http://www.rakeshmistry.ca/">Rakesh Mistry</a></p>
         		</div><!-- .site-info -->
             </div><!-- Foundation .columns end -->
         </div><!-- Foundation .row end -->
