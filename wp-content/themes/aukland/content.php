@@ -17,19 +17,10 @@
 
 	<div class="entry-content">
 		<?php
-			/* translators: %s: Name of current post */
-			// the_content( sprintf(
-			// 	__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'aukland' ),
-			// 	the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			// ) );
 			echo content(55);
 		?>
 
 		<?php
-			// wp_link_pages( array(
-			// 	'before' => '<div class="page-links">' . __( 'Pages:', 'aukland' ),
-			// 	'after'  => '</div>',
-			// ) );
 			echo '<p class="continue"><a href="'.get_the_permalink().'">Continue reading <span class="meta-nav">&rarr;</span></a></p>'
 		?>
 	</div><!-- .entry-content -->

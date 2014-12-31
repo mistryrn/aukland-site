@@ -292,7 +292,6 @@ MUSIC AND VIDEOS
   height: 100%;
 }
 
-#music-links h4 { /*float: right;*/ }
 #music-links a, #music-links a:visited { color: black; }
 #music-links a:hover { color: #008cba; }
 
