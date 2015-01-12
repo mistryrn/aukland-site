@@ -11,7 +11,8 @@ wp-content/*
  
 # Ignore everything in the "plugins" directory, except:
 wp-content/plugins/*
-# !wp-content/plugins/my-single-file-plugin.php
+!wp-content/plugins/socialsidebarwidget.php
+!wp-content/plugins/upcomingshowswidget.php
 # !wp-content/plugins/my-directory-plugin/
  
 # Ignore everything in the "themes" directory, except:
