@@ -63,13 +63,13 @@ class SocialSidebarWidget extends WP_Widget
         // WIDGET CODE GOES HERE
         echo "<ul>";
         if ($instance['facebook'] != null)
-                echo "<li><h5><a class='icon-btn' href='https://www.facebook.com/$facebook' title='Like us on Facebook'><i class='fi-social-facebook'></i> Facebook /$facebook</a></h5></li>";
+                echo "<li><h5><a class='ico-btn' href='https://www.facebook.com/$facebook' title='Like us on Facebook'><span class='icon-facebook-square'></span> Facebook /$facebook</a></h5></li>";
         if ($instance['twitter'] != null)
-                echo "<li><h5><a class='icon-btn' href='https://www.twitter.com/$twitter' title='Follow us on Twitter'><i class='fi-social-twitter'></i> Twitter @$twitter</a></h5></li>";
+                echo "<li><h5><a class='ico-btn' href='https://www.twitter.com/$twitter' title='Follow us on Twitter'><span class='icon-twitter'></span> Twitter @$twitter</a></h5></li>";
         if ($instance['instagram'] != null)
-                echo "<li><h5><a class='icon-btn' href='http://www.instagram.com/$instagram' title='Follow us on Instagram'><i class='fi-social-instagram'></i> Instagram @$instagram</a></h5></li>";
+                echo "<li><h5><a class='ico-btn' href='http://www.instagram.com/$instagram' title='Follow us on Instagram'><span class='icon-instagram'></span> Instagram @$instagram</a></h5></li>";
         if ($instance['youtube'] != null)
-                echo "<li><h5><a class='icon-btn' href='https://www.youtube.com/user/$youtube' title='Subscribe to our YouTube'><i class='fi-social-youtube'></i> YouTube /$youtube</a></h5></li>";
+                echo "<li><h5><a class='ico-btn' href='https://www.youtube.com/user/$youtube' title='Subscribe to our YouTube'><span class='icon-youtube'></span> YouTube /$youtube</a></h5></li>";
         echo "</ul>";
         
         echo $after_widget;

@@ -85,11 +85,22 @@ ul.simple-toggle li h1 a:hover, #mobile-nav a:hover { text-decoration: none; bor
 #mobile-nav { display:none; margin: 0; float: left; line-height: 61px;}
 #mobile-nav a { display: none; margin: 0 20px; text-decoration: none; color: #fff; border: none; }
 
-@media (max-width:40.000em){
+.show-for-more { display: inherit !important; }
+.show-for-less { display: none !important; }
+
+.nav-social a { font-size: 135%; margin: 14px 10px 12px !important; }
+.nav-social a { border: none !important; }
+
+@media (max-width:51.000em){
+  .show-for-more { display: none !important; }
+  .show-for-less { display: inherit !important; }
   
   ul.simple-toggle { display: none; }
+  li.nav-social { display: none !important; }
+
   .anchor-link, #mobile-nav { display: block; }
   .anchor-link, .anchor-link:hover, .anchor-link:visited { color: #fff; text-decoration: none; }
+  #mobile-social.anchor-link { font-size: 125%; }
 
   nav.open { background-color: rgba(219, 39, 55, 0.9); }
 
@@ -109,7 +120,16 @@ ul.simple-toggle li h1 a:hover, #mobile-nav a:hover { text-decoration: none; bor
   ul.open li a { display: block; border-bottom: 1px solid #ccc; text-decoration: none; margin: 0 5px; padding: 5px; }
   ul.open li:hover { background-color: rgba(255, 255, 255, 0.5); }
   ul.open li:nth-child(1) { display: none; } 
-  ul.open li:nth-child(6) a { border: none; } 
+  ul.open li:nth-child(6) a { border: none; }
+
+  @media (max-width: 29.000em){
+    #mobile-nav { font-size: 1.65rem; }
+    #mobile-social.anchor-link { font-size: 100%; }
+    @media (max-width: 25.00em){
+      #mobile-nav { font-size: 1.225rem; }
+      #mobile-social.anchor-link { font-size: 95%; margin-right: 12px; }      
+    }
+  } 
   
 }
 
@@ -249,7 +269,7 @@ a#rsvp, a:hover#rsvp, a:visited#rsvp { margin-bottom: 4px; }
 /*--------------------------------------------------------------
 SOCIAL MEDIA WIDGET
 --------------------------------------------------------------*/
-.icon-btn, .icon-btn:visited {
+.ico-btn, .ico-btn:visited {
   color: #222;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
@@ -257,7 +277,7 @@ SOCIAL MEDIA WIDGET
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-.icon-btn:hover { color: #008CBA; }
+.ico-btn:hover { color: #008CBA; }
 
 /*--------------------------------------------------------------
 FOOTER

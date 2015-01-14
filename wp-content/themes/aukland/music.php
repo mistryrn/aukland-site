@@ -39,10 +39,10 @@ get_header(); ?>
                     <p><?php the_field('release_notes'); ?></p>
                     <?php
                     if(get_field('itunes_link')) {
-                      echo "<p><a href='"; echo (get_field('itunes_link')); echo "'>Buy <i class='fi-shopping-cart'></i></a></p>";
+                      echo "<p><a href='"; echo (get_field('itunes_link')); echo "'>Buy <span class='icon-shopping-cart'></span></a></p>";
                     }
                     if(get_field('download_link')) {
-                      echo "<p><a href='"; echo (get_field('download_link')); echo "'>Download <i class='fi-download'></i></a></p>";
+                      echo "<p><a href='"; echo (get_field('download_link')); echo "'>Download <span class='icon-cloud-download'></span></a></p>";
                     }
                     ?>
                 </div>
@@ -56,10 +56,10 @@ get_header(); ?>
                     <p><?php the_field('release_notes'); ?></p>
                     <?php
                     if(get_field('itunes_link')) {
-                      echo "<p><a href='"; echo (get_field('itunes_link')); echo "'>Buy <i class='fi-shopping-cart'></i></a></p>";
+                      echo "<p><a href='"; echo (get_field('itunes_link')); echo "'>Buy <span class='icon-shopping-cart'></span></a></p>";
                     }
                     if(get_field('download_link')) {
-                      echo "<p><a href='"; echo (get_field('download_link')); echo "'>Download <i class='fi-download'></i></a></p>";
+                      echo "<p><a href='"; echo (get_field('download_link')); echo "'>Download <span class='icon-cloud-download'></span></a></p>";
                     }
                     ?>
                 </div>
