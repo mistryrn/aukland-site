@@ -48,8 +48,12 @@ class UpcomingShowsWidget extends WP_Widget
           echo $before_title . $title . $after_title;;
  
         // WIDGET CODE GOES HERE
-        $response = file_get_contents("http://api.bandsintown.com/artists/Aukland/events.json?api_version=2.0&app_id=AUKLANDSITE");
-        $response = json_decode($response);
+        $response = @file_get_contents("http://api.bandsintown.com/artists/Aukland/events.json?api_version=2.0&app_id=AUKLANDSITE");
+        if ($response === FALSE) {
+            $response = null;
+        } else {
+            $response = json_decode($response);
+        }
         $i = 0;
         echo "<ul>";
         if ($response != null) {

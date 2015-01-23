@@ -21,8 +21,12 @@ get_header(); ?>
             <div class="tabs-content">
               <div class="content active" id="upcoming-tab">
                 <?php
-                $response = file_get_contents("http://api.bandsintown.com/artists/Aukland/events.json?api_version=2.0&app_id=AUKLANDSITE");
-                $response = json_decode($response);
+                $response = @file_get_contents("http://api.bandsintown.com/artists/Aukland/events.json?api_version=2.0&app_id=AUKLANDSITE");
+                if ($response === FALSE) {
+                    $response = null;
+                } else {
+                    $response = json_decode($response);
+                }
                 if ($response != null) {
                     $i = 0;
                     foreach ($response as $event) {
