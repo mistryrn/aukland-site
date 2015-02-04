@@ -21,7 +21,7 @@ get_header(); ?>
       <h3 id="contact">CONTACT</h3>
       <h5>Management &amp; Bookings</h5>
       <h4 id="lucas">Lucas Canzona</h4>
-      <h5><a  id="email" href="mailto:aukland@thesoundofchange.org">aukland@thesoundofchange.org</a></h5>
+      <h5><a  id="email" href="mailto:lucas@thesoundofchange.org">lucas@thesoundofchange.org</a></h5>
       <?php dynamic_sidebar('contact-sidebar'); ?>
     </div>
 
